@@ -5,7 +5,7 @@ class LoginForm extends StatelessWidget {
   BoxDecoration _buildShadowAndRoundedCorners(){
     return BoxDecoration(
       color: Colors.white.withOpacity(0.4),
-      borderRadius: BorderRadius.circular(12.0),
+      borderRadius: BorderRadius.circular(16.0),
       boxShadow: <BoxShadow>[
         BoxShadow(
           spreadRadius: 2.0,
@@ -18,7 +18,7 @@ class LoginForm extends StatelessWidget {
 //User Input
   Widget _buildUserInput(){
     return Padding(
-      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
+      padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 10.0),
       child: TextFormField(
         validator: (val) => !val.contains('@') ? 'Usuario Incorrecto' :null,
         onSaved: (val) => val,
@@ -38,7 +38,7 @@ class LoginForm extends StatelessWidget {
 //Password Input
   Widget _buildPassInput(){
     return Padding(
-      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
+      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 20.0),
       child: TextFormField(
         validator: (val) => !val.contains('@') ? 'Usuario Incorrecto' :null,
         onSaved: (val) => val,

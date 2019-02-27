@@ -39,6 +39,7 @@ class LoginScreen extends StatefulWidget {
     );
   }
 
+//Contruye todos los elementos y los muestra sobre la imagen de fondo
   Widget _buildContent(){
     return SingleChildScrollView(
       child: Column(
@@ -46,15 +47,17 @@ class LoginScreen extends StatefulWidget {
         children: <Widget>[
           _buildLogo(),
           LoginForm(),
+          _buildButton()
         ],
       ),
     );
   }
 
+//Contruye el logo
   Widget _buildLogo(){
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 180.0,
+      height: MediaQuery.of(context).size.height *0.25,
       decoration: BoxDecoration(
         shape: BoxShape.rectangle,
       ),
@@ -65,4 +68,20 @@ class LoginScreen extends StatefulWidget {
     );
   }
 
+//Contruye el boton
+  Widget _buildButton(){
+    return Material(
+      elevation: 3.0,
+      borderRadius: BorderRadius.circular(16.0),
+      color: Colors.blueAccent.withOpacity(0.8),
+      child: MaterialButton(
+        minWidth: MediaQuery.of(context).size.width * .80,
+        onPressed: (){},
+        child: Text("Entrar",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontFamily: 'Roboto', fontSize: 14.0, color: Colors.white)
+        ),
+      ),
+    );
+  }
 }
