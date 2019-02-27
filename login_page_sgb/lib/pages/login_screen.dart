@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 
-import 'package:login_page_sgb/widgets/form.dart';
+import 'package:login_page_sgb/widgets/login_form.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -30,7 +30,7 @@ class LoginScreen extends StatefulWidget {
           BackdropFilter(
             filter: ui.ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
             child: Container(
-              color: Colors.blueAccent.withOpacity(0.5),
+              color: Colors.white.withOpacity(0.3),
             ),
           ),
           _buildContent(),
@@ -58,9 +58,9 @@ class LoginScreen extends StatefulWidget {
       decoration: BoxDecoration(
         shape: BoxShape.rectangle,
       ),
-      margin: const EdgeInsets.fromLTRB(40.0, 20.0, 40.0,40.0),
+      margin: const EdgeInsets.fromLTRB(40.0, 35.0, 40.0,20.0),
       child: Image.asset(
-        'assets/images/logot_sgb.png',
+        'assets/images/logo_sgb.png',
         ),
     );
   }
