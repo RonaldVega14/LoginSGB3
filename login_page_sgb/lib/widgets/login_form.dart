@@ -92,7 +92,7 @@ class LoginForm extends StatelessWidget {
       decoration: _buildShadowAndRoundedCorners(),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Flexible(flex: 3, child: _buildUserInput(), fit: FlexFit.tight,),
           Flexible(flex: 3, child: _buildPassInput(), fit: FlexFit.tight,),
