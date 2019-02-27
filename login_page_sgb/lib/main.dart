@@ -33,9 +33,11 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       resizeToAvoidBottomPadding: false,
-      body: Center(
-        child: LoginScreen(),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+      body: SafeArea(
+        child: Center(
+          child: LoginScreen(),
+        ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
+    );  
   }
 }

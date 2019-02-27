@@ -16,29 +16,8 @@ class LoginScreen extends StatefulWidget {
   void initState(){
     super.initState();
   }
-  
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          Image.asset(
-            'assets/images/bg_sgb.jpg',
-            fit:BoxFit.cover
-          ),
-          BackdropFilter(
-            filter: ui.ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
-            child: Container(
-              color: Colors.white.withOpacity(0.3),
-            ),
-          ),
-          _buildContent(),
-        ],
-      ),
-    );
-  }
 
+  
 //Contruye todos los elementos y los muestra sobre la imagen de fondo
   Widget _buildContent(){
     return SingleChildScrollView(
@@ -47,7 +26,8 @@ class LoginScreen extends StatefulWidget {
         children: <Widget>[
           _buildLogo(),
           LoginForm(),
-          _buildButton()
+          _buildButton(),
+          _buildRegistration()
         ],
       ),
     );
@@ -72,7 +52,7 @@ class LoginScreen extends StatefulWidget {
   Widget _buildButton(){
     return Material(
       elevation: 3.0,
-      borderRadius: BorderRadius.circular(16.0),
+      borderRadius: BorderRadius.circular(12.0),
       color: Colors.blueAccent,
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width * .80,
@@ -84,4 +64,52 @@ class LoginScreen extends StatefulWidget {
       ),
     );
   }
+
+//Construye la linea de texto para registrarse.
+  Widget _buildRegistration(){
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
+      child: Container(
+        child: _buildRegistrationButton(),
+      ),
+
+    );
+  }
+
+  Widget _buildRegistrationButton(){
+    return FlatButton(
+      onPressed: (){},
+      child: Text("REGÍSTRESE AQUÍ",
+        
+        textScaleFactor: 0.8,
+        textAlign: TextAlign.center,
+        style: TextStyle(fontFamily: 'Roboto', fontSize: 14.0, color: Colors.white.withOpacity(0.8),decoration: TextDecoration.underline)
+        ),
+      );
+  }
+
+  
+  
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Stack(
+        fit: StackFit.expand,
+        children: <Widget>[
+          Image.asset(
+            'assets/images/bg_sgb.jpg',
+            fit:BoxFit.cover
+          ),
+          BackdropFilter(
+            filter: ui.ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
+            child: Container(
+              color: Colors.white.withOpacity(0.3),
+            ),
+          ),
+          _buildContent(),
+        ],
+      ),
+    );
+  }
+
 }

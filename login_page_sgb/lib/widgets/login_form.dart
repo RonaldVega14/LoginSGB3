@@ -5,7 +5,7 @@ class LoginForm extends StatelessWidget {
   BoxDecoration _buildShadowAndRoundedCorners(){
     return BoxDecoration(
       color: Colors.white.withOpacity(0.4),
-      borderRadius: BorderRadius.circular(16.0),
+      borderRadius: BorderRadius.circular(12.0),
       boxShadow: <BoxShadow>[
         BoxShadow(
           spreadRadius: 2.0,
@@ -29,7 +29,7 @@ class LoginForm extends StatelessWidget {
           labelText: 'Usuario',
           contentPadding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(16.0)
+            borderRadius: BorderRadius.circular(12.0)
           )
         ),
       ),
@@ -49,7 +49,7 @@ class LoginForm extends StatelessWidget {
           labelText: 'Contraseña',
           contentPadding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(16.0)
+            borderRadius: BorderRadius.circular(12.0)
           )
         ),
       ),
