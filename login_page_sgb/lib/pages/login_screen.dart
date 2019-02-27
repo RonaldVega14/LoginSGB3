@@ -67,11 +67,9 @@ class LoginScreen extends StatefulWidget {
 
 //Construye la linea de texto para registrarse.
   Widget _buildRegistration(){
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
-      child: Container(
+    return Container(
+        margin: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
         child: _buildRegistrationButton(),
-      ),
 
     );
   }
