@@ -43,7 +43,7 @@ class LoginScreen extends StatefulWidget {
       ),
       margin: const EdgeInsets.fromLTRB(40.0, 35.0, 40.0,25.0),
       child: Image.asset(
-        'assets/images/logo_sgb.png',
+        'assets/images/logosgb.png',
         ),
     );
   }
@@ -83,7 +83,7 @@ class LoginScreen extends StatefulWidget {
         
         textScaleFactor: 0.8,
         textAlign: TextAlign.center,
-        style: TextStyle(fontFamily: 'Roboto', fontSize: 14.0, color: Colors.white.withOpacity(0.8),decoration: TextDecoration.underline)
+        style: TextStyle(fontFamily: 'Roboto', fontSize: 14.0, color: Colors.white)
         ),
       );
   }
