@@ -57,11 +57,11 @@ class LoginScreen extends StatefulWidget {
   Widget _buildLogo(){
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height *0.25,
+      height: MediaQuery.of(context).size.height *0.20,
       decoration: BoxDecoration(
         shape: BoxShape.rectangle,
       ),
-      margin: const EdgeInsets.fromLTRB(40.0, 35.0, 40.0,20.0),
+      margin: const EdgeInsets.fromLTRB(40.0, 35.0, 40.0,25.0),
       child: Image.asset(
         'assets/images/logo_sgb.png',
         ),
@@ -73,7 +73,7 @@ class LoginScreen extends StatefulWidget {
     return Material(
       elevation: 3.0,
       borderRadius: BorderRadius.circular(16.0),
-      color: Colors.blueAccent.withOpacity(0.8),
+      color: Colors.blueAccent,
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width * .80,
         onPressed: (){},
