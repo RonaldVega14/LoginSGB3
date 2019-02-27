@@ -75,7 +75,7 @@ class LoginForm extends StatelessWidget {
     return FlatButton(
       onPressed: (){},
       child: Text("¿Olvidó su contraseña?",
-        textScaleFactor: 0.8,
+        textScaleFactor: 0.9,
         textAlign: TextAlign.center,
         style: TextStyle(fontFamily: 'Roboto', fontSize: 14.0, color: Colors.black54)),
       );
@@ -97,7 +97,8 @@ class LoginForm extends StatelessWidget {
           Flexible(flex: 3, child: _buildUserInput(), fit: FlexFit.tight,),
           Flexible(flex: 3, child: _buildPassInput(), fit: FlexFit.tight,),
           Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               Flexible(flex: 1, child: _buildForgotUser(), fit: FlexFit.loose),
               Flexible(flex: 1, child: _buildForgotPass(), fit: FlexFit.tight)
